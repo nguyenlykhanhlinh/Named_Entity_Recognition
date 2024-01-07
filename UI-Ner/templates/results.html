@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NER-Spacy</title>
+</head>
+<body>
+    <div>
+        <h2>Named Entity Recognition Vietnamese</h2>
+    </div>
+
+    <div>
+        <h2>Original Text</h2>
+        <p>{{rawtext}}</p>
+    </div>
+
+    <div>
+        <h2>Result Text</h2>
+        <ul>
+            {% for entity in entities %}
+                <li><strong>{{ entity[0] }}</strong> (Loại: {{ entity[1] }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <a href="/">Trở lại</a>
+</body>
+</html>
